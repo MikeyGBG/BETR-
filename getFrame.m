@@ -28,6 +28,17 @@ BW = edge(blur, 'canny');
 %DISPLAY EDGED IMAGE
 figure, imshow(BW);
 
+%OPEN IMAGE TO REMOVE PHATOM EDGES
+BW = bwareaopen(BW, 200);
+
+%DILATE IMAGE TO THICKEN LINES
+se = strel('line', 2, 0);
+BW = imdilate(BW, se);
+BW = imdilate(BW, se);
+BW = imdilate(BW, se);
+
+figure, imshow(BW);
+
 %HOUGH TRANSFORM IMAGE
 [H, T, R] = hough(BW);  %LOOK INTO HOUGH CIRCLES
 %FIND 2 HIGHEST PEAKS OF HOUGH TRANSFORM (CORRESPONDS TO 2 LONGEST LINES)
