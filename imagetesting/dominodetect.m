@@ -9,7 +9,7 @@ edges=edge(blur,'canny');%find the edges
 [H,Thetas,Rhos]=hough(edges); %returns H-matrix, and theta/rho values defining
 nlines=size(Thetas);
 nlines=nlines(2);
-intersects=zeros([factorial(nlines),2]);% number of intersects:=nlines!
+intersects=zeros([nlines,2]);% number of intersects:=nlines!
 for i=1:nlines;
     theta1=Thetas(i);
     rho1=Rhos(i);
