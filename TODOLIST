@@ -1,0 +1,12 @@
+Things we need:
+
+Localisation - determining camera intrinsics and extrinsics (calibrations),
+
+Image aquisition- efficiently aquiring and processing the rgbd video feed for processing
+
+Segmentation -Hough transforms, morphologoical techniques, perspective transformations
+
+Classification- Working out domino values
+
+Speed estimation
+
