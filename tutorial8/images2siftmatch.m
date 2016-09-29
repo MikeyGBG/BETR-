@@ -61,7 +61,7 @@ perm = randperm(size(I_f,2)) ;
 sel = perm(1:min([length(perm),NUM_SIFT_TO_SHOW]));
 
 % Top (by match score)
-sel=matches_sort(1,:);
+sel=matches_sort(1,:)
 
 % Plot SIFT Features
 figure(10);
