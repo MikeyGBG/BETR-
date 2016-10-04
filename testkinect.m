@@ -1,3 +1,4 @@
+%-------------------------------TEST SCRIPT----------------------------------------------------%
 %% Initialize color video device
 tic;
 %Get videoinput (vi) object
