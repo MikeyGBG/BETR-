@@ -1,3 +1,4 @@
+%-----------------------TEST SCRIPT------------------------------------------%
 %Test script for the getExtrinsics function
 colorVid = videoinput('kinect', 1, 'RGB_1280x960');
 
