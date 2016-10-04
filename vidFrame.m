@@ -1,7 +1,11 @@
+%----------------------------------------TEST SCRIPT-------------------------------------------------%
+
+%Setup the RGB camera
 vid = videoinput('kinect', 1, 'RGB_1280x960');
 src = getselectedsource(vid);
 
 vid.FramesPerTrigger = Inf;
+%Create structuring element
 se = strel('line', 2, 0);
 
 N = 8;
@@ -20,6 +24,7 @@ image(frame);
 
 %imshow(im);
 
+%Convert RGB image to grayscale
 gray = rgb2gray(frame);
 
 
@@ -56,6 +61,7 @@ BW = edge(blur, 'canny');
 %DISPLAY EDGED IMAGE
 %figure, imshow(BW);
 
+%Perform a BW area opening (REmoves small noise)
 BW = bwareaopen(BW, 200);
 
 
