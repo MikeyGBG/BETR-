@@ -1,2 +1,0 @@
-# METR-
-Proj2
