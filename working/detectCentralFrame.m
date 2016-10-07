@@ -14,7 +14,8 @@ transf(2) = trans(1)*rot(2,1)+ trans(2)*rot(2,2) + trans(3)*rot(2,3);
 transf(3) = 600;
 
 message = sprintf('X: %d\tY: %d\t Z: %d\n', round(transf(1)), round(transf(2)), round(transf(3)));
-message2 = sprintf('ROLL: %d\tPITCH: %d\tYAW: %d\n', round(RPY(1)),round(RPY(2)), round(RPY(3)));
+message2 = sprintf('ROLL: %d\tPITCH: %d\tYAW: %d\n', round(RPY(1)), ...
+    round(RPY(2)), round(sign(RPY(3))*(abs(180-abs(RPY(3))))));
 disp(message2);
 disp(message);
 end
