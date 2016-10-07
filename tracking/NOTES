@@ -1,0 +1,9 @@
+NOTES:
+  The code in this repository uses a great amount of code from the matab tracking example.
+  http://au.mathworks.com/help/vision/examples/motion-based-multiple-object-tracking.html
+  
+  
+  The code identifies the moving objects accross the frames, however, it depends on a video 
+  format and hence, the velocities can not be extracted.
+  
+  The code is hence not to be used in the final submission.
