@@ -1,0 +1,6 @@
+<stdio.h>
+
+int main(){
+  fprintf(stderr,"hello_World\n");
+  return 0;
+}
